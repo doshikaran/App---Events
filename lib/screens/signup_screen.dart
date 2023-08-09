@@ -1,3 +1,4 @@
+import 'package:events/database/auth.dart';
 import 'package:events/screens/login_screen.dart';
 import 'package:events/widgets/custom_button.dart';
 import 'package:flutter/gestures.dart';
@@ -19,6 +20,24 @@ class _SignupScreenState extends State<SignupScreen> {
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
+// sign up
+  void onsignUp() {
+    createUser(_nameController.text, _emailController.text,
+            _passwordController.text)
+        .then((value) {
+      if (value == "User created successfully") {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Account created successfully, Please Login")),
+        );
+        Navigator.push(context, LoginScreen.route());
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(value)),
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,8 +80,8 @@ class _SignupScreenState extends State<SignupScreen> {
                   hintext: 'Enter your Password'),
               const SizedBox(height: 25),
               CustomButton(
-                  onTap: () {},
-                  label: 'Login',
+                  onTap: onsignUp,
+                  label: 'Sign Up',
                   backgroundColor: Pallete.whiteColor,
                   textColor: Colors.black),
               const SizedBox(height: 25),
