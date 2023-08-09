@@ -1,3 +1,5 @@
+import 'package:events/database/auth.dart';
+import 'package:events/screens/home_screen.dart';
 import 'package:events/screens/signup_screen.dart';
 import 'package:events/theme/pallete.dart';
 import 'package:events/widgets/custom_button.dart';
@@ -17,6 +19,24 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  void onlogin() {
+    loginUser(
+      _emailController.text,
+      _passwordController.text,
+    ).then((value) {
+      if (value == 'User logged successfully') {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Login Successful")),
+        );
+        Navigator.push(context, HomeScreen.route());
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Login Failed')),
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 25),
               CustomButton(
-                  onTap: () {},
+                  onTap: onlogin,
                   label: 'Login',
                   backgroundColor: Pallete.whiteColor,
                   textColor: Colors.black),
