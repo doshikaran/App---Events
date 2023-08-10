@@ -42,8 +42,8 @@ Future logoutUser() async {
 // check user session
 Future checkUserSession() async {
   try {
-    final user = await account.getSession(sessionId: 'current');
-    return "user";
+    final userSession = await account.getSession(sessionId: 'current');
+    return "userSession";
   } catch (error) {
     return error;
   }

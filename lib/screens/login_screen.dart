@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 30,
                     letterSpacing: 5,
                     fontWeight: FontWeight.w600,
-                    color: Pallete.whiteColor),
+                    color: Pallete.blackColor),
               ),
               const SizedBox(height: 25),
               CustomInput(
@@ -88,18 +88,20 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomButton(
                   onTap: onlogin,
                   label: 'Login',
-                  backgroundColor: Pallete.whiteColor,
-                  textColor: Colors.black),
+                  backgroundColor: Pallete.purpleColor,
+                  textColor: Colors.white),
               const SizedBox(height: 25),
               RichText(
                   text: TextSpan(
                       text: "Do not have an account?",
-                      style: const TextStyle(fontSize: 14),
+                      style: const TextStyle(
+                          fontSize: 14, color: Pallete.blackColor),
                       children: [
                     TextSpan(
                         text: ' Sign up',
                         style: const TextStyle(
-                            color: Pallete.greyColor, fontSize: 14),
+                            color: Color.fromARGB(255, 105, 104, 104),
+                            fontSize: 14),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             Navigator.push(context, SignupScreen.route());

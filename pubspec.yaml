@@ -38,6 +38,9 @@ dependencies:
   appwrite: ^9.0.1
   google_fonts: ^5.1.0
   shared_preferences: ^2.2.0
+  file_picker: ^5.3.3
+  share_plus: ^7.1.0
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:

@@ -14,7 +14,7 @@ class _CheckSessionsState extends State<CheckSessions> {
   @override
   void initState() {
     checkUserSession().then((value) {
-      if (value == "user") {
+      if (value == "userSession") {
         Navigator.pushReplacement(context, HomeScreen.route());
       } else {
         Navigator.pushReplacement(context, LoginScreen.route());
