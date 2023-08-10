@@ -1,16 +1,20 @@
-# events
+# Flutter Events App with Appwrite Backend
 
-A new Flutter project.
+Welcome to the Flutter Events App, a user-friendly mobile application that allows users to easily register for events, create new events, and explore event details. The app's backend is powered by Appwrite, providing seamless user authentication and data management.
 
-## Getting Started
+## Demo
 
-This project is a starting point for a Flutter application.
+Check out the app in action: [Demo Video](https://drive.google.com/file/d/16Ww-06AGdf_BDQbeteLwrfUfv-_aTm0B/view?usp=sharing)
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- User Registration: Easily create an account using your email and password.
+- User Login: Log in to your account securely.
+- Create Events: Hosts can create new events, providing event details such as event name, description, location, time and date etc.
+- Event Details: Users can view event details including event name, description, location, time and date and more in detail.
+- Register for Events: Attendees can easily register for events they're interested in.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies Used
+
+- **Flutter**: A powerful UI toolkit by Google for building natively compiled applications for mobile, web, and desktop.
+- **Appwrite**: An open-source backend server that simplifies backend development by providing authentication, database, storage, and more.
