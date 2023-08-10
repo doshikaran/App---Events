@@ -14,6 +14,7 @@ String getUserId() {
 
 class EventDetails extends StatefulWidget {
   final Document data;
+
   static MaterialPageRoute route({required Document data}) =>
       MaterialPageRoute(builder: (context) => EventDetails(data: data));
   const EventDetails({super.key, required this.data});

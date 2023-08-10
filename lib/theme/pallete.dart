@@ -9,4 +9,6 @@ class Pallete {
   static const Color greyColor = Color(0xFFF3F3F3);
   static const Color redColor = Color.fromRGBO(249, 25, 127, 1);
   static const Color purpleColor = Color(0xFF6040BB);
+  static const Color eventCardColor = Color(0xFF35277B);
+  static const Color eventCardTitlColor = Color(0xFFB5A1F8);
 }
